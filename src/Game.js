@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 class Game extends Component {
     state = {
         gravity: 0.8,
-        lift: -15,
+        lift: -20,
         bird: {
             x: 50,
             y: 100,
