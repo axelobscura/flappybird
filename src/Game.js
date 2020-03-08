@@ -7,18 +7,15 @@ class Game extends Component {
             x: 50,
             y: 100,
             velocity: 0,
-            radius: 20
+            radius: 10
         }
     }
 draw = () => {
         const ctx = this.refs.canvas.getContext("2d");
         ctx.fillStyle = "green";
-        ctx.fillStyle = "white";
-        ctx.fillRect(0, 0, this.refs.canvas.width,   
-                     this.refs.canvas.height);           
+        ctx.fillRect(0, 0, this.refs.canvas.width, this.refs.canvas.height);           
         ctx.beginPath();
-        ctx.arc(this.state.bird.x, this.state.bird.y, 
-               this.state.bird.radius, 0, 2 * Math.PI);
+        ctx.arc(this.state.bird.x, this.state.bird.y, this.state.bird.radius, 0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
     }
@@ -50,7 +47,7 @@ componentDidMount() {
               x: 50,
               y: this.state.bird.y,
               velocity: this.state.bird.velocity + this.state.lift,
-              radius: 20
+              radius: 40
               }
             }) : null
         );
