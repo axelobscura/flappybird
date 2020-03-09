@@ -15,9 +15,9 @@ draw = () => {
         ctx.fillStyle = "green";
         ctx.fillRect(0, 0, this.refs.canvas.width, this.refs.canvas.height);           
         ctx.beginPath();
+        ctx.fillStyle = "#FF0000"; //red
         ctx.arc(this.state.bird.x, this.state.bird.y, this.state.bird.radius, 0, 2 * Math.PI);
         ctx.fill();
-        ctx.stroke();
     }
 update = () => {
         let newV = (this.state.bird.velocity + this.state.gravity) * 0.9
