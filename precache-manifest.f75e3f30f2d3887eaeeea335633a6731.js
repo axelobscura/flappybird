@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d5592a25d8f67d1cf7d6afbb65492b9b",
+    "revision": "617a2bbe36229761f33008fe70a6330c",
     "url": "/flappybird/index.html"
   },
   {
-    "revision": "2b29d1e47e2998d9f28c",
+    "revision": "5d61662ac20dc2045b1f",
     "url": "/flappybird/static/css/main.7e63e6e3.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flappybird/static/js/2.5a74ef3b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2b29d1e47e2998d9f28c",
-    "url": "/flappybird/static/js/main.e2b632a3.chunk.js"
+    "revision": "5d61662ac20dc2045b1f",
+    "url": "/flappybird/static/js/main.6e771413.chunk.js"
   },
   {
     "revision": "97456e198016732fbc75",
