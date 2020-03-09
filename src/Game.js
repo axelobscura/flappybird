@@ -13,7 +13,7 @@ class Game extends Component {
 draw = () => {
         const ctx = this.refs.canvas.getContext("2d");
         ctx.canvas.width  = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+        ctx.canvas.height = window.innerHeight;
         ctx.fillStyle = "green";
         ctx.fillRect(0, 0, this.refs.canvas.width, this.refs.canvas.height);           
         ctx.beginPath();
@@ -34,7 +34,7 @@ update = () => {
               0
             ),
             velocity: newV,
-            radius: 20
+            radius: 40
           }
         });
     }
