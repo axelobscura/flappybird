@@ -49,7 +49,7 @@ componentDidMount() {
               x: 50,
               y: this.state.bird.y,
               velocity: this.state.bird.velocity + this.state.lift,
-              radius: 40
+              radius: 10
               }
             }) : null
         );
