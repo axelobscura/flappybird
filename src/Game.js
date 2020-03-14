@@ -8,6 +8,10 @@ class Game extends Component {
             y: 100,
             velocity: 0,
             radius: 10
+        },
+        bullet: {
+          x: 50,
+          y:100
         }
     }
 draw = () => {
@@ -21,10 +25,7 @@ draw = () => {
         ctx.arc(this.state.bird.x, this.state.bird.y, this.state.bird.radius, 0, 2 * Math.PI);
         ctx.fill();
         ctx.fillStyle = "#111111"; //red
-        ctx.arc(10, 10, 2, 1, 2);
-        ctx.fill();
-        ctx.fillStyle = '#000000';
-        ctx.fillRect(this.state.bird.x, this.state.bird.y - 2, 70, 5);
+        ctx.fillRect(this.state.bullet.x, this.state.bullet.y - 2, 150, 5);
         ctx.fillStyle = '#ff0000';
         ctx.fillRect(this.refs.canvas.width - 200, 30, 150, 10);
     }
@@ -42,6 +43,16 @@ update = () => {
             ),
             velocity: newV,
             radius: 40
+          },
+          bullet: {
+            x: Math.max(
+              Math.min(
+                this.state.bird.y + newV,
+                this.refs.canvas.height + this.state.bird.radius
+              ),
+              0
+            ),
+            y: 100
           }
         });
     }
