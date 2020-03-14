@@ -14,12 +14,19 @@ draw = () => {
         const ctx = this.refs.canvas.getContext("2d");
         ctx.canvas.width  = window.innerWidth;
         ctx.canvas.height = window.innerHeight;
-        ctx.fillStyle = "green";
+        ctx.fillStyle = "#f2f2f2";
         ctx.fillRect(0, 0, this.refs.canvas.width, this.refs.canvas.height);           
         ctx.beginPath();
-        ctx.fillStyle = "#FF0000"; //red
+        ctx.fillStyle = "#000000"; //red
         ctx.arc(this.state.bird.x, this.state.bird.y, this.state.bird.radius, 0, 2 * Math.PI);
         ctx.fill();
+        ctx.fillStyle = "#111111"; //red
+        ctx.arc(10, 10, 2, 1, 2);
+        ctx.fill();
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(this.state.bird.x, this.state.bird.y - 2, 70, 5);
+        ctx.fillStyle = '#ff0000';
+        ctx.fillRect(this.refs.canvas.width - 200, 30, 150, 10);
     }
 update = () => {
         let newV = (this.state.bird.velocity + this.state.gravity) * 0.9
