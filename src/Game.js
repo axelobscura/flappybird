@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class Game extends Component {
     state = {
         gravity: 0.8,
@@ -12,6 +13,10 @@ class Game extends Component {
         bullet: {
           x: 50,
           y:100
+        },
+        cuadro: {
+          x: 100,
+          y: 100
         }
     }
 draw = () => {
@@ -27,7 +32,7 @@ draw = () => {
         ctx.fillStyle = "#111111"; //red
         ctx.fillRect(this.state.bullet.x, this.state.bullet.y - 2, 150, 5);
         ctx.fillStyle = '#ff0000';
-        ctx.fillRect(this.refs.canvas.width - 200, 30, 150, 10);
+        ctx.fillRect(this.state.cuadro.x - 200, 0, 150, 150);
     }
 update = () => {
         let newV = (this.state.bird.velocity + this.state.gravity) * 0.9
@@ -47,12 +52,21 @@ update = () => {
           bullet: {
             x: Math.max(
               Math.min(
-                this.state.bird.y + newV,
+                this.state.bullet.y - newV,
                 this.refs.canvas.height + this.state.bird.radius
               ),
               0
             ),
             y: 100
+          },
+          cuadro: {
+            x: Math.max(
+              Math.min(
+                this.state.bird.y + newV,
+                this.refs.canvas.width + this.state.bird.radius
+              ),
+              0
+            ),
           }
         });
     }
